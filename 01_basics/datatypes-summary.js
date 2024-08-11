@@ -33,3 +33,30 @@ console.log(myObj);
 console.log(myFunction);
 
 
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack (Prmitive) , Heap (Non-Primitive)
+
+let myName="shaif"; //STACK
+
+let anotherName=myName;
+
+anotherName="khan";
+
+console.log(anotherName);
+console.log(myName);
+
+let userOne={
+    email:"khanshaif9102@gmail.com",
+    upi:"khanshaif@ybl"
+}
+
+let userTwo=userOne;
+
+userTwo.email="shaifkhan@gmail.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
