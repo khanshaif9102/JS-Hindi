@@ -32,3 +32,6 @@ const str="hello shaif @ how are-you";
 //console.log(url.split('@'));
 console.log(str.split(' '));
 console.log(str.split('-'));
+
+let str1="1";
+console.log("1"+1);
