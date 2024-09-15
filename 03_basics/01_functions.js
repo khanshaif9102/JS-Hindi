@@ -39,4 +39,19 @@ function loginUserMessage(username) {
 }
 
 //console.log(loginUserMessage("shaif"));
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+function calculateCartPrice(val1,val2, ...num1){
+return num1
+}
+
+// console.log(calculateCartPrice(200,300,100,200,400,999));
+
+const user={
+    username:"shaif",
+    price:199
+}
+function handleObject(anyObject){
+
+    
+}
