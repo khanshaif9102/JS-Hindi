@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>    
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li');
+        li.innerHTML=langName;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("Python")
+    addLanguage("Java");
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("SQL");
+
+    //Edit
+    const lastLang=document.querySelector('li:nth-child(4)');
+    console.log(lastLang);
+    // lastLang.innerHTML="HMM"
+
+   const newLi= document.createElement('li');
+   newLi.textContent="C++"
+   lastLang.replaceWith(newLi);
+
+   //edit
+   const firstLi=document.querySelector("li:first-child")
+   firstLi.outerHTML='<li>Type Script</li>'
+
+   //remove
+   const lastLi=document.querySelector("li:last-child");
+   lastLi.remove();
+</script>
+</html>
