@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAI AUR JAVA <SCRIPT></SCRIPT></title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</butoon>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate=function(str){
+        console.log(str,"Shaif",Date.now())
+    }
+    // setInterval(function(){
+    //     console.log("shaif",Date.now());
+        
+    // },1000)
+    // const inetervalId=setInterval(sayDate,1000,"Hi")
+    // clearInterval(inetervalId)
+
+    const start=document.getElementById('start');
+    const stop=document.getElementById('stop');
+    let intervalId;
+    start.addEventListener('click',function(e){
+        intervalId = setInterval(sayDate,"Shaif",1000);
+    })
+
+    stop.addEventListener('click',function(e){
+       clearInterval(intervalId)
+    })
+
+</script>
+</html>
