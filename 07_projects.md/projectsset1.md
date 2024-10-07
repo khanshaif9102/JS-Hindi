@@ -177,3 +177,67 @@ function endGame(){
 
 
 ```
+
+## Project 5 Solution Code
+# Unlimited Colors
+```javascript
+
+//Generate a random color
+
+const randomColor=function(){
+    const hex="0123456789ABCDEF";
+    let color='#';
+    for(let i=0;i<6;i++){
+        color+=hex[Math.floor(Math.random()*16)]
+    }
+    return color;
+}
+let setIntervalId;
+// console.log(randomColor());
+const startChangingColor=function(){
+    //document.body.style.backgroundColor=randomColor();
+  if(!setIntervalId){
+    setIntervalId= setInterval(changeBgColor,1000)
+  }
+    function changeBgColor(){
+        document.body.style.backgroundColor=randomColor();
+    }
+}
+const stopChangingColor=function(){
+    clearInterval(setIntervalId)
+    setIntervalId=null;
+}
+
+document.querySelector('#start').addEventListener('click', startChangingColor)
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+```
+
+## project 6 Solution Code
+# Keyboard
+```javascript
+
+const insert=document.getElementById('insert');
+window.addEventListener('keydown',(e)=>{
+    insert.innerHTML=`
+    <div class='color'>
+    <table>
+    <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+    </tr>
+    <tr>
+    <td>${e.key===" "?'space':e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+    </tr>
+    </table>
+    </div>
+    `;
+    console.log(e.key);
+    
+});
+
+```
